@@ -5,7 +5,7 @@ Author: Scott Miller
 PhD Candidate at Florida State University
 Advisor: Andrew Rassweiler
 
-This repository was created for NSF project, CNH-L: "Multiscale Dynamics of Coral Reef Fisheries: Feedbacks Between Fishing Practices, Livelihood Strategies, and Shifting Dominance of Coral and Algae" (Award #1714704).
+This repository was created for NSF project, "CNH-L: Multiscale Dynamics of Coral Reef Fisheries: Feedbacks Between Fishing Practices, Livelihood Strategies, and Shifting Dominance of Coral and Algae" (Award #1714704).
 
 This repository contains four Python scripts that are run in succession to generate a JSON file for the API (json_generator.py), send the post/get requests (coralnet_api_deployer.py), check for errors (json_error_checker.py), then parse the resulting JSON into a .csv (json_parser.py).  Below is documentation for the four scripts, in the order they should be run.  These operate under the assumption that images are stored on Dropbox, separated by folders of up to ~10000 images, although more could likely work, too (in our case, they are separated based on site).
 
