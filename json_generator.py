@@ -4,6 +4,8 @@ Author: Scott Miller
 PhD Candidate at Florida State University
 Advisor: Andrew Rassweiler
 
+This script was written for NSF project, "CNH-L: Multiscale Dynamics of Coral Reef Fisheries: Feedbacks Between Fishing Practices, Livelihood Strategies, and Shifting Dominance of Coral and Algae" (Award #1714704).
+
 This script locates your images stored on a Dropbox account and generates a JSON file that will be sent to the CoralNet API to tell it which images to annotate and where 
 to place points to score.  It is set up for the purposes of our research project which places 30 stratified random points on 4000x3000 images, excluding the outer 15% 
 of the image.  You will likely need to change the to_append section to generate points that make sense for your particular project, but hopefully this provides a good 
