@@ -4,6 +4,8 @@ Author: Scott Miller
 PhD Candidate at Florida State University
 Advisor: Andrew Rassweiler
 
+This script was created for NSF project, CNH-L: "Multiscale Dynamics of Coral Reef Fisheries: Feedbacks Between Fishing Practices, Livelihood Strategies, and Shifting Dominance of Coral and Algae" (Award #1714704).
+
 This script queries the CoralNet API to automatically score images based on the JSON file generated using "json_generator.py".  Currently, the API can only accept requests of 
 100 images, so this breaks up the JSON file into 100 image chunks, sends these to the API, checks every 60s on the status of them, saves the annotations when complete, then sends
 the next 100 images.  It prints status updates to the console so you can track its progress.
