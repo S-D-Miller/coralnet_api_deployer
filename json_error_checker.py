@@ -4,6 +4,8 @@ Author: Scott Miller
 PhD Candidate at Florida State University
 Advisor: Andrew Rassweiler
 
+This script was written for NSF project, "CNH-L: Multiscale Dynamics of Coral Reef Fisheries: Feedbacks Between Fishing Practices, Livelihood Strategies, and Shifting Dominance of Coral and Algae" (Award #1714704).
+
 This script checks the exported JSON generated from coralnet_api_deployer.py for errors.  If no errors are detected, then it prints "No errors!" and completes quickly.  If errors
 are detected, it will then attempt to fix the errors by sending new post/get requests to CoralNet and overwriting the error entries with data.  If it successfully
 fixes all errors, it will print "A-OK!" when completed and the final script, json_parser.py, can be run.  Otherwise, it will print "STILL HAVE ISSUES!!!!" and you 
