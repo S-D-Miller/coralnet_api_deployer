@@ -1,4 +1,4 @@
-# MooreaCNH_coralnet
+# coralnet_api_deployer
 Contains python scripts to interface with the CoralNet API
 
 Author: Scott Miller
