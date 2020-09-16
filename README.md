@@ -1,8 +1,8 @@
 # coralnet_api_deployer
 Contains python scripts to interface with the CoralNet API
 
-Author: Scott Miller
-PhD Candidate at Florida State University
+Author: Scott Miller  
+PhD Candidate at Florida State University  
 Advisor: Andrew Rassweiler
 
 This repository was created for NSF project, "CNH-L: Multiscale Dynamics of Coral Reef Fisheries: Feedbacks Between Fishing Practices, Livelihood Strategies, and Shifting Dominance of Coral and Algae" (Award #1714704).
