@@ -104,7 +104,7 @@ if len(error_images) > 0:
                                           {"row": random.randint(870,1290), 
                                            "column": random.randint(2933,3400)},
                                           {"row": random.randint(1290,1710), 
-                                          "column": random.randint(600,1710)}, 
+                                          "column": random.randint(600,1067)}, 
                                           {"row": random.randint(1290,1710), 
                                            "column": random.randint(1067,1533)},
                                           {"row": random.randint(1290,1710), 
