@@ -49,4 +49,4 @@ This repository contains four Python scripts that are run in succession to gener
   - site_to_use --> Same as before
   - local_path --> Same as before
   
-  This script takes the export JSON file generated using coralnet_api_deployer.py and parses the data fields to store them in a dataframe.  This dataframe is in a similar (although not identical) format as the exported annotations files from the web version of CoralNet.  This is then exported as a .csv, and the filename is {site_to_use}.csv.
+  This script takes the export JSON file generated using coralnet_api_deployer.py and parses the data fields to store them in a dataframe.  This dataframe is in a similar (although not identical) format as the exported annotations files from the web version of CoralNet.  As in "json_error_checker.py", the regular expression assumes a JPG, so you may need to change this line to your image extension.  This is then exported as a .csv, and the filename is {site_to_use}.csv.
