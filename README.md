@@ -37,11 +37,12 @@ This repository contains four Python scripts that are run in succession to gener
   VARIABLES TO DEFINE:
   - site_to_use --> Same as before
   - local_path --> Same as before
+  - image_extension --> This is going to be the file extension of your uploaded images as a string, without the preceding period.  For us, we use JPEGs, so this value is "JPG".  You can find this value in the full file name of one of your images.
   - dropbox_token --> Same as before
   - classifier_url -- Same as before
   - coralnet_token --> Same as before
   
-  This script takes the export JSON from coralnet_api_deployer.py and checks for errors, which occassionally occur.  The way coralnet_api_deployer.py is written, it can return errors for some images instead of data.  This checks for errors, and if some are detected, it attempts to fix them by sending new requests for just those images and overwrites the error data.  If none are detected, it will print "No errors!" and you are free to move onto json_parser.py.  If it detects errors but manages to fix them, it will run for a while but eventually print "A-OK!".  Otherwise it will print "STILL HAVE ISSUES!!!!", which means you can try running it again or you may need to look into potential issues in your internet/code (I personally have yet to have this script not fix errors on the first try).  Note that this is set up to locate jpg files, so you may need to change the regular expressions to locate different file types.  This does not generate a new file (it overwrites {site_to_use}_export.JSON).
+  This script takes the export JSON from coralnet_api_deployer.py and checks for errors, which occassionally occur.  The way coralnet_api_deployer.py is written, it can return errors for some images instead of data.  This checks for errors, and if some are detected, it attempts to fix them by sending new requests for just those images and overwrites the error data.  If none are detected, it will print "No errors!" and you are free to move onto json_parser.py.  If it detects errors but manages to fix them, it will run for a while but eventually print "A-OK!".  Otherwise it will print "STILL HAVE ISSUES!!!!", which means you can try running it again or you may need to look into potential issues in your internet/code (I personally have yet to have this script not fix errors on the first try).  This does not generate a new file (it overwrites {site_to_use}_export.JSON).
   
 ## 4. json_parser.py
 
@@ -49,4 +50,4 @@ This repository contains four Python scripts that are run in succession to gener
   - site_to_use --> Same as before
   - local_path --> Same as before
   
-  This script takes the export JSON file generated using coralnet_api_deployer.py and parses the data fields to store them in a dataframe.  This dataframe is in a similar (although not identical) format as the exported annotations files from the web version of CoralNet.  As in "json_error_checker.py", the regular expression assumes a JPG, so you may need to change this line to your image extension.  This is then exported as a .csv, and the filename is {site_to_use}.csv.
+  This script takes the export JSON file generated using coralnet_api_deployer.py and parses the data fields to store them in a dataframe.  This dataframe is in a similar (although not identical) format as the exported annotations files from the web version of CoralNet.  This is then exported as a .csv, and the filename is {site_to_use}.csv.
