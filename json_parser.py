@@ -19,6 +19,7 @@ import re
 #Define variables to easily locate the exported JSON from previous steps
 site_to_use = ''
 local_path = ''
+image_extension = '' #The file extension on your images you uploaded.  In our case, we use GoPro JPEG's, so we use "JPG"
 
 #Loads the json file
 f = open(f"{local_path}{site_to_use}_export.json",)
@@ -51,7 +52,7 @@ for i in range(len(d)): #loops over the images in the file
             temp_conf.append(temp_class[k]['score'])
 
         #Now it takes the relevant information and appends it to the output dictionary.  A dictionay is used in this step for efficiency purposes.
-        dic[f'row_{n}'] = [re.search('^.*[/](\w{2}.*[.JPG])', img_id).group(1), img_id, j+1, 
+        dic[f'row_{n}'] = [re.search(f'^.*[/](.*[.{image_extension}])', img_id).group(1), img_id, j+1, 
                                 img_points[j]['column'], img_points[j]['row'],
                                 temp_lab[0], temp_conf[0], 
                                 temp_lab[1], temp_conf[1],
