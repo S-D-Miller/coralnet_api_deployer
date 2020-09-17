@@ -49,5 +49,6 @@ This repository contains four Python scripts that are run in succession to gener
   VARIABLES TO DEFINE:
   - site_to_use --> Same as before
   - local_path --> Same as before
+  - image_extension --> This is going to be the file extension of your uploaded images as a string, without the preceding period. For us, we use JPEGs, so this value is "JPG". You can find this value in the full file name of one of your images.
   
   This script takes the export JSON file generated using coralnet_api_deployer.py and parses the data fields to store them in a dataframe.  This dataframe is in a similar (although not identical) format as the exported annotations files from the web version of CoralNet.  This is then exported as a .csv, and the filename is {site_to_use}.csv.
