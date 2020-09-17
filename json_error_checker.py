@@ -24,6 +24,7 @@ import os
 #Defining variables to locate the relevant files
 site_to_use = '' #Same name as in previous script
 local_path = '' #Pathway leading up to where these files will be saved on your local drive
+image_extension = '' #The file extension (without the preceding period) for you uploaded images.  In my case, I use JPEGs, so this value is "JPG"
 dropbox_token = '' #Your Dropbox token
 dropbox_path = '' #This variable is the pathway leading to the folder you want to search for on Dropbox (ex, I have my folder_to_use inside a folder called "CoralNet", so this would be "/CoralNet/")
 
@@ -59,7 +60,7 @@ for i in range(len(d)):
     attrib = d[i]['attributes']
     
     if 'error' in attrib.keys(): #Checks to see if the 'error' key is in the image attribute dictionary
-            error_images.append(re.search('^.*[/](\w{2}.*[.JPG])', d[i]['id']).group(1)) #If it is, it adds the image name to the error_images list
+            error_images.append(re.search(f'^.*[/](.*[.{image_extension}])', d[i]['id']).group(1)) #If it is, it adds the image name to the error_images list
             error_index.append(i) #And it saves the index to be removed later
 
 if len(error_images) > 0:
@@ -198,7 +199,7 @@ if len(error_images) > 0:
         attrib = exp_dat[i]['attributes']
             
         if 'error' in attrib.keys(): #Checks to see if the 'error' key is in the image attribute dictionary
-            error_images.append(re.search('^.*[/](\w{2}.*[.JPG])', d[i]['id']).group(1)) #If it is, it adds the image name to the error_images list
+            error_images.append(re.search(f'^.*[/](.*[.{image_extension}])', d[i]['id']).group(1)) #If it is, it adds the image name to the error_images list
             error_index.append(i) #And it saves the index to be removed later
                     
     if len(error_images) > 0:
