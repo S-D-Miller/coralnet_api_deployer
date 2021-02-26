@@ -9,6 +9,8 @@ This repository was created for NSF project, "CNH-L: Multiscale Dynamics of Cora
 _______________________
 This repository contains four Python scripts that are run in succession to generate a JSON file for the API (json_generator.py), send the post/get requests (coralnet_api_deployer.py), check for errors (json_error_checker.py), then parse the resulting JSON into a .csv (json_parser.py).  Below is documentation for the four scripts, in the order they should be run.  These operate under the assumption that images are stored on Dropbox, separated by folders of up to ~10000 images, although more could likely work, too (in our case, they are separated based on site).  As written, these use Python's f-string formatting, so they depend on using Python 3.6 or higher.
 
+[Jordan Pierce](https://github.com/JordanMakesMaps) wrote a more in-depth tutorial and refined some of the code used here, so feel free to check out [his tutorial](https://github.com/JordanMakesMaps/CoralNet-API) for additional reference.
+
 ## 1. json_generator.py
 
   VARIABLES TO DEFINE:
